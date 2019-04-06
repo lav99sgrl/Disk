@@ -1,10 +1,9 @@
-
     
 #include<math.h>
 #include<stdio.h>
 int main()
 {
-    int i,n,j=0,k=0,x=0,l,req[50],mov=0,cp,ub,end,pv, lower[50],upper[50], temp,a[50];
+    int i,n,j=0,k=0,x=0,l,req[50],mov=0,cp,ub,end,pv, low[50],up[50], mid,a[50];
     printf("Enter total number of cylinders \n");
     scanf("%d",&ub);
 	printf("Enter the current position\n");
@@ -24,12 +23,12 @@ int main()
     {
         if(req[i]<cp)
         {
-            lower[j]=req[i];
+            low[j]=req[i];
             j++;
         }
         if(req[i]>cp)
         {
-            upper[k]=req[i];
+            up[k]=req[i];
             k++;
         }
     }
@@ -39,11 +38,11 @@ int main()
     {
         for(l=0;l<j-1;l++)
         {
-            if(lower[l]<lower[l+1])
+            if(low[l]<low[l+1])
             {
-                temp=lower[l];
-                lower[l]=lower[l+1];
-                lower[l+1]=temp;
+                mid=low[l];
+                low[l]=low[l+1];
+                low[l+1]=mid;
             }
         }
     }
