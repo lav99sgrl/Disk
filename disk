@@ -1,6 +1,16 @@
     
 #include<math.h>
 #include<stdio.h>
+int abs(int n,int m)
+{
+if(n>m)
+{
+return n-m;
+}
+else{
+return n-m;
+}
+}
 int main()
 {
     int i,n,j=0,k=0,x=0,l,req[50],mov=0,cp,ub,end,pv, low[50],up[50], mid,a[50];
@@ -54,7 +64,7 @@ int main()
         {
             if(up[l]>up[l+1])
             {
-                mid=upper[l];
+                mid=up[l];
                 up[l]=up[l+1];
                 up[l+1]=mid;
             }
